@@ -5,7 +5,7 @@ import asyncio
 async def send_req(addr):
     async with ClientSession() as session:
         try:
-            r = await session.get(f'https://arbitrum.foundation/_next/data/lB0zTjQwwi0nJOMcTT0Td/eligibility.json?address={addr.lower()}')
+            r = await session.get(f'https://arbitrum.foundation/_next/data/NDhqybgYBJYIbHFAh1PQB/eligibility.json?address={addr.lower()}')
             # print(await r.text())
             r_json = await r.json()
             if r_json == {'pageProps': {'__N_REDIRECT': '/', '__N_REDIRECT_STATUS': 307}, '__N_SSP': True}:
